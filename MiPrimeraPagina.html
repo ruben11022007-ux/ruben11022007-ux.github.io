@@ -1,0 +1,283 @@
+<!DOCTYPE html> <!-- Archivo HTML -->
+<html lang="es"> <!-- Establecido español para que lo entienda mejor la página -->
+
+<head>  <!-- Metadatos -->
+  <meta charset="UTF-8">   <!-- Lenguaje que incluye tildes y ñ -->
+  <title>Mi primera página</title>    <!-- Nombre visible en la pestaña -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Adaptación plataforma -->
+
+
+
+
+  <style>  /* --- Abro CSS --- */
+
+body {  /* --- General página --- */
+  background-color: #2f2f49;   /* --- Color de fondo de la página --- */
+  font-family: 'Franklin Gothic Medium';  /* --- Defino fuente de letra --- */
+}
+
+    /* --- MENÚ SUPERIOR --- */
+    nav {                                 /* --- El nav entero seleccionado --- */
+      background-color:transparent;        /* --- Lo pongo transparente para luego editarlo mejor --- */
+    }
+
+
+h1 {                           /* --- Encabezado página --- */
+text-align:center             /* --- Alineado céntrico --- */
+}
+
+.Blanco{   /* --- Clase comentada abajo --- */
+color: white;  /* --- Color blanco de letras --- */
+}
+
+.Centrico{                    /* --- Selección de clase para poner numerosos párrafos centricos o otras ediciones --- */
+text-align:center;
+color: white;
+}
+
+
+    nav ul {                  /* --- Dentro del nav, la lista desordenada --- */
+      list-style: none;  /* --- No contenta estilo propio --- */
+      margin: 0;        /* --- Sin margen ni padding --- */
+      padding: 0;
+      display: flex;   /* --- Disposición del menú --- */
+    }
+
+
+
+.hobbies {    /* --- Defino tamaño de las imágenes --- */
+  width: 400px;  /* --- Ancho --- */
+  height: 350px;  /* --- Altura --- */
+}
+
+
+.Poster {
+  width: 300px;
+  height: 400px;
+}
+
+
+#Menucaja {
+  background-color: rgb(20, 14, 92);   /* --- Color de fondo del div --- */
+  max-width: 60%;            /* ancho del menú */
+  margin: 0 auto;              /* lo centra */
+  padding: 5px 10px;           /* tamaño más pequeño */
+  margin-top: 1%;           /* --- Márgen superior --- */
+  margin-bottom: 1%;         /* --- Márgen inferior --- */
+}
+
+
+#Titulocaja {
+ background-color: rgb(125, 30, 250);
+  max-width: 80%;            /* ancho del menú */
+  margin: 0 auto;              /* lo centra */
+  padding: 5px 10px;           /* tamaño más pequeño */
+  margin-top: 2%;
+}
+
+
+#Banner {
+  width: 60%;    
+  height: 200px;
+  display: block;   /* --- Lo pongo a modo de elemento de bloque para centrarlo --- */
+  margin: 0 auto;
+}
+
+.Logos {
+width: 40px;
+height: 40px;
+
+}
+
+.Minititulo {
+  background-color: rgb(12, 6, 66);
+  max-width: 30%;            /* --- Ancho máximo --- */
+  margin: 0 auto;              
+  padding: 1px 3px;           
+  margin-top: 1%;
+  margin-bottom: 2%;
+  border: 1px solid #000000;  /* --- Defino borde, tamaño y color --- */
+  text-align: center;
+}
+
+    nav li a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;  /* --- Sin decorado --- */
+    }
+
+    nav li a:hover {
+      background-color: #cc74ff;   /* --- Defino el color de los botones al pasar por encima el ratón --- */
+    }
+
+    /* --- DOS COLUMNAS (CORREGIDO) --- */
+    .contenedor {
+      display: flex;               /* Aseguro columnas lado a lado */
+      flex-direction: row;         /* Fuerzo fila horizontal */
+      padding: 20px;
+      gap: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .columna {
+      flex: 1;
+      background: #561e96;
+      border: 1px solid #ddd;
+      padding: 20px;
+      box-sizing: border-box;
+      min-width: 0;               /* Evito que las columnas salten de línea */
+    }
+
+    /* --- PIE DE PÁGINA --- */
+    footer {    /* --- Defino el footer, pie de página --- */
+      background-color: #018d57;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+
+    /* --- RESPONSIVE: SOLO en pantallas pequeñas --- */
+    @media (max-width: 700px) {
+      .contenedor {
+        flex-direction: column;    /* SOLO en móvil se apilan */
+      }
+    }
+
+#imagenes {
+    display: grid;  /* --- Está a modo de grid o parrilla --- */
+  grid-template-columns: repeat(2, auto); /* 2 columnas, ancho automático  */
+  gap: 50px;
+  justify-content: center;   /* centra las columnas dentro del contenedor */
+  margin: 20px auto;         /* centra el contenedor en la página */
+  max-width: 500px;          /* ajusta el ancho total de la cuadrícula */
+  margin-top: 300px;
+}
+
+
+#pelis {
+    display: grid;
+  grid-template-columns: repeat(2, auto); /* 2 columnas, ancho automático  */
+  gap: 30px;
+  justify-content: center;   /* centra las columnas dentro del contenedor */
+  margin: 20px auto;         /* centra el contenedor en la página */
+  max-width: 500px;          /* ajusta el ancho total de la cuadrícula */
+}
+
+
+/* Estilo del botón */
+.boton-ancla {
+padding: 10px 20px;  /* Espacio entre bloque y contenido del elemento */
+background-color: rgb(0, 255, 128);
+color: white;
+border: none;  /* Sin borde definido */
+border-radius: 5px;  /* Radio del borde */
+cursor: pointer;  /* Cursor al pasar por encima */
+font-size: 16px;
+text-decoration: none;  /* Le quito el subrayado por estética */
+	}
+
+
+  /* Contenedor que centra su contenido */
+.centro {    /* Selecciono clase */
+text-align: center; /* centra horizontalmente */
+margin-top: 20px;   /* espacio arriba */
+}
+
+
+  </style>
+  
+</head>
+
+
+<body> <!-- Parte visible -->
+
+<div id="Titulocaja">   <!-- Abro un div y le doy id para editarlo en css -->
+	<h1 id="Inicio" style="color: white;"> MI PRIMERA WEB </h1>  <!-- Le defino aquí el color blanco -->
+</div>
+	
+	
+	
+<!-- MENÚ SUPERIOR -->
+  <nav>  <!-- Lo pongo todo en un mismo compartimento y defino enlaces -->
+    <div id="Menucaja">  <!-- Lo mismo para el diseño -->
+    <ul> <!-- Pongo lista desordenada con enlaces locales a las otras páginas, y lo aplico en todas -->
+      <li><a href="MiPrimeraPagina.html">Inicio</a></li> 
+      <li><a href="SobreMi.html">Sobre mí</a></li>
+      <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+    </div>
+  </nav>
+
+
+<img src="Heartless.jpg" alt="Banner de la página" id="Banner">  <!-- Imagen local, con texto alternativo por si hubiese error y lo defino para editarlo en CSS -->
+
+
+	<p class="Centrico">Este es mi primer proyecto de página web. Soy Rubén Padilla Benaim y estudio 2º de Bachillerato científico.</p>   <!-- Creo una clase centrico para tenerlo en CSS con alineado y poner directamente a cada elemento esta clase y alinearse automático -->
+
+
+  <!-- DOS COLUMNAS -->
+  <div class="contenedor">  <!-- Lo meto todo dentro de una caja grande que diseñaremos en CSS, y creo otras subcajas que irán paralelamente en la página -->
+
+
+    <div class="columna">  <!-- Subcaja -->
+<div class="Minititulo">  <!-- Solo hago un subdiv para meter el titulo de una subcaja dentro de otra caja y editarlo en CSS -->
+      <h2 class="Blanco">Mis hobbies</h2>  <!-- Defino class blanco para hacer lo mismo que con centrico, pero para aplicarle color blanco de forma automática -->
+</div>
+
+<div id="imagenes">  <!-- Defino el div como imágenes para luego hacerle modificaciones en CSS -->
+<img src="Dimebag.jpg" alt="Imagen de guitarra electrica" class="hobbies">  <!-- En cada imagen le añado una subclase común para editarlos por separado -->
+<img src="Games.jpg" alt="Imagen de videojuegos" class="hobbies">
+<img src="Leer.jpg" alt="Imagen de libros" class="hobbies">
+<img src="Fiesta.jpg" alt="Imagen de fiesta" class="hobbies">
+</div>
+    </div>
+
+
+<!-- Hago exactamente lo mismo que lo anterior -->
+      <div class="columna">
+<div class="Minititulo">
+      <h2 class="Blanco">Mi cultura audiovisual favorita</h2>
+</div>
+
+<div id="pelis">
+<img src="Skins.png" alt="Imagen de Skins" class="Poster">
+<img src="VirginSuicides.jpg" alt="Imagen de Las Virgenes Suicidas" class="Poster">
+<img src="Shameless.jpg" alt="Imagen de Shameless" class="Poster">
+<img src="SH2.png" alt="Imagen de Silent Hill 2" class="Poster">
+<img src="AIB.png" alt="Imagen de Alice in Borderland" class="Poster">
+<img src="Trainspotting.png" alt="Imagen de Trainspotting" class="Poster">
+</div>
+    </div>
+
+
+</div> <!-- Cierro las columnas -->
+
+
+
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Mi sitio web personal</p>
+    <a href="https://www.instagram.com/_7rxbnn?igsh=MWV3NWp1Y2xjZzRoeA%3D%3D&utm_source=qr" target="_blank"> <!-- Pongo enlace dentro de la imagen que sería el logo, y además que vaya a otra pestaña -->
+      <img src="Ig.png" alt="Logo Instagram" class="Logos">
+    </a>
+  </footer>
+
+<br>
+
+<div class="centro"> <!-- Vuelvo meterlo en una caja y le añado clase al boton -->
+    <a href="#Inicio" class="boton-ancla">Ir al inicio de esta página</a> <!-- Vuelvo a meter enlace con texto y clase para diseñarlo en CSS -->
+</div>
+
+
+<br><br> <!-- Saltos de página para crear márgen -->
+
+
+
+
+</body>
+</html>

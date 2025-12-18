@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- He duplicado la página solo para modificar el contenido -->
+ <!-- Solo se encuentran comentarios de la página anterior que había hecho mientras hacía la página -->
+<head>
+  <meta charset="UTF-8">
+  <title>Mi primera página</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+  <style>
+
+body {
+  background-color: #2f2f49;
+  font-family: 'Franklin Gothic Medium';
+}
+
+    /* --- MENÚ SUPERIOR --- */
+    nav {                                 /* --- El nav entero seleccionado --- */
+      background-color:transparent;
+    }
+
+
+h1 {                           /* --- Encabezado página --- */
+text-align:center
+}
+
+.Blanco{
+color: white;
+}
+
+.Centrico{                    /* --- Selección de clase para poner numerosos párrafos centricos o otras ediciones --- */
+text-align:center;
+color: white;
+}
+
+
+    nav ul {                  /* --- Dentro del nav, la lista desordenada --- */
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+
+
+.hobbies {
+  width: 400px;
+  height: 350px;
+}
+
+
+.Poster {
+  width: 300px;
+  height: 400px;
+}
+
+
+#contacto {       /* --- Disposición del contacto --- */ 
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contacto input,
+#contacto textarea {    /* --- Defino el área del texto --- */
+  padding: 10px;
+  border: 1px solid #c4adf8;
+  border-radius: 4px;
+}
+
+#contacto button {    /* --- Defino botón --- */
+  padding: 10px;
+  background: #333;
+  color: rgb(180, 185, 255);
+  border: none;
+  border-radius: 4px;
+}
+
+#contacto button:hover {  /* --- Color al pasar por encima --- */
+  background: #a6aadb;
+  cursor: pointer;
+}
+
+.Formmm { /* --- Lo pongo céntrico y blanco --- */
+  text-align: center;
+  color: white;
+  margin: 0 auto;     /* centro el div */
+  width: 100%;        /* evita que se comprima demasiado */
+}
+
+#Menucaja {
+  background-color: rgb(20, 14, 92);
+  max-width: 60%;            /* ancho del menú */
+  margin: 0 auto;              /* lo centra */
+  padding: 5px 10px;           /* tamaño más pequeño */
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+
+#Titulocaja {
+ background-color: rgb(125, 30, 250);
+  max-width: 80%;            /* ancho del menú */
+  margin: 0 auto;              /* lo centra */
+  padding: 5px 10px;           /* tamaño más pequeño */
+  margin-top: 2%;
+}
+
+
+#Banner {
+  width: 60%;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.Logos {
+width: 40px;
+height: 40px;
+
+}
+
+.Minititulo {
+  background-color: rgb(12, 6, 66);
+  max-width: 30%;            
+  margin: 0 auto;              
+  padding: 1px 3px;           
+  margin-top: 1%;
+  margin-bottom: 2%;
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+    nav li a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav li a:hover {
+      background-color: #cc74ff;
+    }
+
+    /* --- DOS COLUMNAS (CORREGIDO) --- */
+    .contenedor {
+      display: flex;               /* Asegura columnas lado a lado */
+      flex-direction: row;         /* Fuerza fila horizontal */
+      padding: 20px;
+      gap: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .columna {
+      flex: 1;
+      background: #561e96;
+      border: 1px solid #ddd;
+      padding: 20px;
+      box-sizing: border-box;
+      min-width: 0;               /* Evita que las columnas salten de línea */
+    }
+
+    /* --- PIE DE PÁGINA --- */
+    footer {
+      background-color: #018d57;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+
+    /* --- RESPONSIVE: SOLO en pantallas pequeñas --- */
+    @media (max-width: 700px) {
+      .contenedor {
+        flex-direction: column;    /* SOLO en móvil se apilan */
+      }
+    }
+
+#imagenes {
+    display: grid;
+  grid-template-columns: repeat(2, auto); /* 2 columnas, ancho automático  */
+  gap: 50px;
+  justify-content: center;   /* centra las columnas dentro del contenedor */
+  margin: 20px auto;         /* centra el contenedor en la página */
+  max-width: 500px;          /* ajusta el ancho total de la cuadrícula */
+  margin-top: 300px;
+}
+
+
+#pelis {
+    display: grid;
+  grid-template-columns: repeat(2, auto); /* 2 columnas, ancho automático  */
+  gap: 30px;
+  justify-content: center;   /* centra las columnas dentro del contenedor */
+  margin: 20px auto;         /* centra el contenedor en la página */
+  max-width: 500px;          /* ajusta el ancho total de la cuadrícula */
+}
+
+
+/* Estilo del botón */
+.boton-ancla {
+padding: 10px 20px;  /* Espacio entre bloque y contenido del elemento */
+background-color: rgb(0, 255, 128);
+color: white;
+border: none;  /* Sin borde definido */
+border-radius: 5px;  /* Radio del borde */
+cursor: pointer;  /* Cursor al pasar por encima */
+font-size: 16px;
+text-decoration: none;  /* Le quito el subrayado por estética */
+	}
+
+
+  /* Contenedor que centra su contenido */
+.centro {    /* Selecciono clase */
+text-align: center; /* centra horizontalmente */
+margin-top: 20px;   /* espacio arriba */
+}
+
+
+  </style>
+  
+</head>
+
+
+<body>
+
+<div id="Titulocaja">
+	<h1 id="Inicio" style="color: white;"> CONTACTO</h1>
+</div>
+	
+	
+	
+<!-- MENÚ SUPERIOR -->
+  <nav>
+    <div id="Menucaja">
+    <ul>
+     <li><a href="MiPrimeraPagina.html">Inicio</a></li>
+      <li><a href="SobreMi.html">Sobre mí</a></li>
+      <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+    </div>
+  </nav>
+
+
+
+<!-- FORMULARIO -->
+<div class="Formmm"> <!-- Abro un div para definirlo todo como uno y centrarlo -->
+  
+  <form id="contacto" action="https://formspree.io/f/mgvgzjrv" method="POST">
+    <!-- A través de esta plataforma, se puede enviar correos y que me lleguen -->
+
+    <label>Nombre:</label>   <!-- Requiere poner nombre, y se muestra. Igual que lo demás -->
+    <input type="text" name="nombre" required> 
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Mensaje:</label>
+    <textarea name="mensaje" rows="5" required></textarea>
+
+    <button type="submit">Enviar</button>  <!-- Botón más definición -->
+  </form>
+
+</div>
+
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Mi sitio web personal</p>
+    <a href="https://www.instagram.com/_7rxbnn?igsh=MWV3NWp1Y2xjZzRoeA%3D%3D&utm_source=qr" target="_blank">
+      <img src="Ig.png" alt="Logo Instagram" class="Logos">
+    </a>
+  </footer>
+
+<br>
+
+<div class="centro"> <!-- Vuelvo meterlo en una caja y le añado clase al boton -->
+    <a href="#Inicio" class="boton-ancla">Ir al inicio de esta página</a> <!-- Vuelvo a meter enlace con texto y clase para diseñarlo en CSS -->
+</div>
+
+
+<br><br>
+
+
+
+
+</body>
+</html>
